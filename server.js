@@ -35,6 +35,10 @@ app.use(
   })
 );
 
+app.get("/", function (req, res) {
+  res.json({ message: "Success..." });
+});
+
 app.post("/rooms/:id", async (req, res) => {
   const payment_capture = 1;
   const amount = parseInt(req.body.totalPrice),
